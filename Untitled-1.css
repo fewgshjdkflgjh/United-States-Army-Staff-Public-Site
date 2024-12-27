@@ -1,0 +1,82 @@
+/* Reset and Basic Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body, html {
+    font-family: Arial, sans-serif;
+    background-color: #1d1f21;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #ffffff;
+}
+
+/* Login Container */
+.login-container {
+    width: 320px;
+    padding: 25px;
+    background-color: #2b2e33;
+    border-radius: 8px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    border: 2px solid #586a57; /* Army green border */
+}
+
+/* Header */
+.login-header {
+    font-size: 26px;
+    font-weight: bold;
+    color: #97a97c; /* Army green header */
+    margin-bottom: 20px;
+}
+
+/* Input Fields */
+.input-field {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: #33363a;
+    color: #ffffff;
+    border: 1px solid #97a97c; /* Army green border */
+}
+.input-field:focus {
+    outline: none;
+    border: 1px solid #b8c292; /* Lighter green on focus */
+}
+
+/* Login Button */
+.login-button {
+    width: 100%;
+    padding: 12px;
+    background-color: #586a57;
+    border: none;
+    border-radius: 4px;
+    font-size: 18px;
+    color: #ffffff;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+.login-button:hover {
+    background-color: #697d68; /* Lighter army green */
+}
+
+/* Forgot Password */
+.forgot-password {
+    font-size: 14px;
+    color: #99aab5;
+    margin-top: 10px;
+}
+.forgot-password a {
+    color: #7289da;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+.forgot-password a:hover {
+    color: #97a97c; /* Army green on hover */
+}
