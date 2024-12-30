@@ -37,14 +37,18 @@ const apiUrl = `https://groups.roblox.com/v2/groups?groupIds=${groupId}`;
 async function fetchGroupData() {
   try {
     const response = await fetch(apiUrl);
-    const data = await response.json();
-    if (response.ok) {
-      console.log(data);  // This will output the group data
-    } else {
-      console.error("Error fetching group data:", data);
+    if (!response.ok) {
+      throw new Error(`HTTP error! status: ${response.status}`);
     }
+    const data = await response.json();  // Parse the JSON response
+    console.log(data);  // Log the response data to the console
+    // Here you can update your UI with the fetched data
+    document.getElementById("group-name").textContent = data.name;
+    document.getElementById("group-id").textContent = data.id;
+    document.getElementById("member-count").textContent = data.memberCount;
+    document.getElementById("group-description").textContent = data.description;
   } catch (error) {
-    console.error("Failed to fetch group data:", error);
+    console.error("Failed to fetch group data:", error.message);
   }
 }
 
