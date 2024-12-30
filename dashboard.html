@@ -49,10 +49,12 @@
         }
 
         const data = await response.json();
-        console.log(data);  // Log the response data
+        console.log("API Response:", data);  // Log the entire response to inspect its structure
 
-        // Use the fetched data to update the page
+        // Check if the structure matches what's expected
         if (data && data.data) {
+          console.log("Group Data:", data.data);  // Log the group data object
+
           document.getElementById("group-name").textContent = data.data.name || "N/A";
           document.getElementById("group-id").textContent = data.data.id || "N/A";
           document.getElementById("member-count").textContent = data.data.memberCount || "N/A";
