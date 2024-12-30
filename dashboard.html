@@ -33,11 +33,11 @@
   <script>
 const groupId = "123456";  // Replace with your actual group ID
 const apiUrl = `https://groups.roblox.com/v2/groups?groupIds=${groupId}`;
-const corsProxy = "https://cors-anywhere.herokuapp.com/";  // CORS proxy URL
+const corsProxy = "https://api.allorigins.win/raw?url=";  // A different CORS proxy
 
 async function fetchGroupData() {
   try {
-    const response = await fetch(corsProxy + apiUrl, {
+    const response = await fetch(corsProxy + encodeURIComponent(apiUrl), {
       method: "GET",
       headers: {
         "Accept": "application/json",
@@ -61,6 +61,7 @@ async function fetchGroupData() {
 }
 
 fetchGroupData();
+
 
 
   </script>
