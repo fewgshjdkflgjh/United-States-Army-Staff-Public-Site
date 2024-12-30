@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Roblox Group Dashboard</title>
+  <link rel="stylesheet" href="dashboard.css" />
+</head>
+<body>
+  <div id="dashboard-container">
+    <div class="header">
+      <h1>Roblox Group Dashboard</h1>
+    </div>
+
+    <!-- Group Info Section -->
+    <div class="group-info">
+      <h3>Your Roblox Group</h3>
+      <p><strong>Group Name:</strong> <span id="group-name">Loading...</span></p>
+      <p><strong>Group ID:</strong> <span id="group-id">Loading...</span></p>
+      <p><strong>Member Count:</strong> <span id="member-count">Loading...</span></p>
+      <p><strong>Description:</strong> <span id="group-description">Loading...</span></p>
+    </div>
+
+    <!-- Activity Feed Section -->
+    <div class="activity-feed">
+      <h3>Recent Activities</h3>
+      <ul id="activity-list">
+        <!-- Activities will be dynamically inserted here -->
+      </ul>
+    </div>
+  </div>
+
+  <script src="dashboard.js"></script>
+</body>
+</html>
